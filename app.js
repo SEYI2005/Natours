@@ -40,7 +40,7 @@ app.use(mongoSanitize());
 // Data sanitization against XSS attacks
 app.use(xss());
 
- // security middleware(sets various http headers for security purposes)
+// security middleware(sets various http headers for security purposes)
 //For handling static files(files that don't have any routes)
 
 // Developement logging
