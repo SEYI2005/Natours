@@ -25,12 +25,14 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",
+    "nodemon": "^3.1.14",
     "prettier": "^3.6.2"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "axios": "^1.13.6",
     "bcryptjs": "^3.0.2",
+    "compression": "^1.8.1",
     "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.1",
     "express": "^4.22.1",

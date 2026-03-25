@@ -11,10 +11,6 @@ class APIFeatures {
     const excludeFields = ['page', 'sort', 'limit', 'fields'];
     excludeFields.forEach((el) => delete queryObj[el]);
 
-    // console.log(queryObj);
-    // req.query = { duration: 5, difficulty: 'easy' }
-    // 1b. Advance Filtering
-    // // Executing query
     let querySring = JSON.stringify(queryObj);
     querySring = querySring.replace(
       /\b(gte|gt|lte|lt)\b/g,
@@ -25,7 +21,6 @@ class APIFeatures {
   }
   sort() {
     if (this.queryString.sort) {
-      console.log(this.queryString.sort);
       const sortBy = this.queryString.sort.split(',').join(' ');
 
       this.query = this.query.sort(sortBy); // sort('price ratingsAverage') incase the price are the same

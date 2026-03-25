@@ -18,6 +18,7 @@ router.get('/my-tours', authController.protect, viewController.getMyTours);
 //   authController.protect,
 //   viewController.updateUserData, when you are not using an API
 // );
+router.get('/tour', authController.isLoggedIn, viewController.getOverview);
 router.get('/tour/:slug', authController.isLoggedIn, viewController.getTour);
 
 module.exports = router;

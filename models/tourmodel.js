@@ -132,11 +132,10 @@ tourSchema.virtual('reviews', {
   localField: '_id',
 });
 // Document middleware(using pre)
-tourSchema.pre('save', function (next) {
-  console.log(this);
-  this.slug = slugify(this.name, { lower: true });
-  next();
-});
+// tourSchema.pre('save', function (next) {
+//   this.slug = slugify(this.name, { lower: true });
+//   next();
+// });
 
 // Using Embeding
 //tourSchema.pre('save', async function (next) {
@@ -182,11 +181,11 @@ tourSchema.pre(/^find/, function (next) {
 });
 
 // using post
-tourSchema.post(/^find/, function (docs, next) {
-  console.log(`Query took ${Date.now() - this.start} milliseconds!`);
-  console.log(docs);
-  next();
-});
+// tourSchema.post(/^find/, function (docs, next) {
+//   console.log(`Query took ${Date.now() - this.start} milliseconds!`);
+//   console.log(docs);
+//   next();
+// });
 // Aggregation middleware
 // tourSchema.pre('aggregate', function (next) {
 //   this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });

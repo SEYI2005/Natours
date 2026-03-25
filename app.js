@@ -15,6 +15,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 app.use(express.json({ limit: '10kb' })); // in order to perform post methods(passes he data from the body)
 app.use(
   express.urlencoded({
@@ -68,6 +69,7 @@ app.use(
     ],
   }),
 );
+app.use(compression());
 
 // Testing  middleware-
 app.use((req, res, next) => {
